@@ -7,7 +7,8 @@ module.exports = {
         'primary-bg': '#1d202e',
         'sidebar': '#141620',
         'primary': '#1fa2d2',
-        'accent': '#ea4444',
+        'accent': '#5c14ed',
+        'white': '#d3d3ed',
       }
     }
   },

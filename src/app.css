@@ -4,20 +4,24 @@
 
 @layer base {
     body {
-        @apply bg-primary-bg text-accent;
+        @apply bg-primary-bg;
         font-family: Roboto, Helvetica, Arial, sans-serif;
     }
 
     h1 {
-        @apply text-white text-6xl font-bold;
+        @apply text-white text-8xl font-bold;
+        font-size: clamp(3rem, 7vw, 6rem);
+        letter-spacing: 0.1em;
     }
 
     h2 {
         @apply text-gray-400 text-5xl font-medium;
+        letter-spacing: 0.1em;
     }
 
     h3 {
         @apply text-gray-500 text-3xl font-medium;
+        letter-spacing: 0.1em;
     }
 
     h6 {
@@ -27,5 +31,34 @@
 
     p {
         @apply text-gray-400;
+    }
+}
+
+/*-------------------------------------*/
+/*           Components                */
+/*-------------------------------------*/
+
+@layer components {
+    .neumorphism {
+        border-radius: 17px;
+        @apply bg-primary-bg;
+        box-shadow:  6px 6px 12px #0f1017,
+        -6px -6px 12px #2b3045;
+    }
+
+    .neumorphism-inner {
+        @apply neumorphism;
+        box-shadow: inset 6px 6px 12px #0f1017,
+        inset -6px -6px 12px #2b3045;
+    }
+}
+
+/*-------------------------------------*/
+/*           Utilities                 */
+/*-------------------------------------*/
+
+@layer utilities {
+    .full-page-section {
+        @apply h-[100vh] flex justify-center flex-col;
     }
 }

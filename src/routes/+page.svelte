@@ -58,10 +58,7 @@
             </section>
 
 
-            <Spacer size="100vh"/>
-
-
-            <section id="Projects" class="full-page-section">
+            <section id="Projects" class="flex flex-col">
                 {#each projects as item, i}
                     <div
                       class="m-5 flex p-5"
@@ -74,7 +71,7 @@
                         </div>
                         <Spacer size="10rem"/>
                         <img class="neumorphism max-w-[50%]" src={item.preview}/>
-                        <div class="bg-accent h-44 absolute left-0 w-full opacity-20 -z-20"></div>
+                        <div class="bg-accent h-44 absolute left-0 w-full opacity-20 -z-20 mt-10"></div>
                     </div>
                 {/each}
             </section>

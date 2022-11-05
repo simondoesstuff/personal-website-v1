@@ -61,4 +61,8 @@
     .full-page-section {
         @apply h-[100vh] flex justify-center flex-col;
     }
+
+    .container-resp {
+        @apply container lg:w-[70%] px-16 mx-auto;
+    }
 }

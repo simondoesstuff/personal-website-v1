@@ -1,5 +1,6 @@
 <script>
     import Spacer from "$lib/Spacer.svelte";
+    import FancyButton from "$lib/FancyButton.svelte";
 
     export let item;
     export let index;
@@ -36,14 +37,11 @@
             <span class="p-2 font-mono text-gray-500">{tech}</span>
         {/each}
         {#if item.gotoLink}
-            <button class="block">
-                <a
-                  class="m-5 block rounded-2xl border p-2 text-gray-300 shadow transition-transform duration-300 border-primary hover:scale-110 hover:brightness-150"
-                  href={item.gotoLink}
-                >
+            <div class="m-5">
+                <FancyButton link={item.gotoLink}>
                     See for yourself
-                </a>
-            </button>
+                </FancyButton>
+            </div>
         {/if}
     </div>
     <!--        Image       -->

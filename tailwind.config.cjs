@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         'primary-bg': '#1d202e',
         'bg-light': '#2f354f',
-        'sidebar': '#141620',
+        'bg-dark': '#141620',
         'primary': '#2dc0e1',
         'primary-light': '#63e1fd',
         'primary-dark': '#154c58',

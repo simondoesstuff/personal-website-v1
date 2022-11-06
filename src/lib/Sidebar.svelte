@@ -1,20 +1,20 @@
 <script>
-    import Logo from "$lib/Logo.svelte";
-    import Spacer from "$lib/Spacer.svelte";
-
     const content = [ "About", "Projects", "Experience", "Contact" ] ;
 </script>
 
-<!--    todo reomve neumorphism, it requires a specific BG       -->
-<section class="flex flex-col justify-between h-[100vh] bg-sidebar sticky top-0">
+<section class="flex flex-col justify-between h-[100vh] bg-bg-dark sticky top-0">
+<!--    Logo        -->
     <div class="grid place-items-center p-7">
-        <Logo />
+        <div class="h-12 aspect-square w-full">
+            <img src="./icon.png" alt="Logo">
+        </div>
     </div>
+<!--    Nav Buttons     -->
     <div class="flex flex-col justify-center h-full">
         <div class="flex flex-col justify-between relative -top-7">
             <span class="w-full h-[.2rem] bg-primary-bg"></span>
             {#each content as item}
-                <a href="#{item}"><h6 class="w-full p-7 text-primary bg-sidebar font-medium">{item}</h6></a>
+                <a href="#{item}"><h6 class="w-full p-7 text-primary bg-bg-dark font-medium">{item}</h6></a>
                 <!--            dividers        -->
                 <span class="w-full h-[.2rem] bg-primary-bg"></span>
             {/each}

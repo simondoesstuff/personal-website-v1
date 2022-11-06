@@ -63,6 +63,6 @@
     }
 
     .container-resp {
-        @apply container lg:w-[70%] px-16 mx-auto;
+        @apply container lg:w-[60%] px-16 mx-auto;
     }
 }

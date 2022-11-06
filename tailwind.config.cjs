@@ -5,11 +5,11 @@ module.exports = {
     extend: {
       colors: {
         'primary-bg': '#1d202e',
-        'card-primary': '#252a3f',
-        'card-secondary': '#33384f',
+        'bg-light': '#2f354f',
         'sidebar': '#141620',
         'primary': '#2dc0e1',
-        'secondary': '#6a7ac5',
+        'primary-light': '#63e1fd',
+        'primary-dark': '#154c58',
         'white': '#d3d3ed',
       }
     }

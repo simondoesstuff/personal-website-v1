@@ -1,6 +1,7 @@
-<script>
+<script lang="ts">
     import Sidebar from "$lib/Sidebar.svelte";
     import Spacer from "$lib/Spacer.svelte";
+    import ProjectCard from "$lib/ProjectCard.svelte";
 
     const projects = [
         {
@@ -12,7 +13,8 @@
             ],
             github: "https://github.com/rodrigodmd/spotify-profile",
             link: "https://spotify-profile.vercel.app/",
-            preview: "https://static.bandainamcoent.eu/high/dark-souls/dark-souls-1/00-page-setup/ds1_game-thumbnail.jpg"
+            image: "https://static.bandainamcoent.eu/high/dark-souls/dark-souls-1/00-page-setup/ds1_game-thumbnail.jpg",
+            gotoLink: "https://spotify-profile.vercel.app/"
         },
         {
             title: "A Simple Blog",
@@ -22,7 +24,7 @@
             techs: [
                 "SvelteKit", "TailwindCSS", "Netlify CMS"
             ],
-            preview: "https://w0.peakpx.com/wallpaper/149/468/HD-wallpaper-dark-blue-hud-modern-tech-technology-thumbnail.jpg"
+            image: "https://github.com/simondoesstuff/TexToIL/raw/model2/DemoGif.gif"
         },
         {
             title: "Weather App",
@@ -31,7 +33,8 @@
             techs: [
                 "Svelte", "TailwindCSS", "OpenWeatherMap API", "Google Maps API"
             ],
-            preview: "https://w0.peakpx.com/wallpaper/149/468/HD-wallpaper-dark-blue-hud-modern-tech-technology-thumbnail.jpg"
+            image: "https://w0.peakpx.com/wallpaper/149/468/HD-wallpaper-dark-blue-hud-modern-tech-technology-thumbnail.jpg",
+            gotoLink: "https://weather-app-rodrigodmd.vercel.app/"
         }
     ];
 </script>
@@ -44,7 +47,7 @@
 
 
         <section id="About" class="full-page-section container-resp">
-            <h3 class="mb-6 text-primary -rotate-2 -translate-x-5">Hello, I'm</h3>
+            <h3 class="mb-6 -translate-x-5 -rotate-2 text-primary">Hello, I'm</h3>
             <h1 class="mb-6">Simon Walker</h1>
             <p class="w-[75%] text-xl">
                 I'm a software engineer based in the UK. I'm currently working at
@@ -57,42 +60,20 @@
 
 
         <section id="Projects">
+<!--            Header      -->
+            <div class="flex align-middle container-resp justify-between">
+                <div class="grid place-items-center">
+                    <h3 class="text-white">A few things I've built</h3>
+                </div>
+                <div class="w-[40%] grid place-items-center">
+                    <div class="bg-bg-light h-0.5 w-full"></div>
+                </div>
+                <Spacer size="5rem"/>
+            </div>
+<!--            Cards       -->
             {#each projects as item, i}
-                <div
-                  class="w-full p-10"
-                  class:bg-card-primary={i % 2 === 0}
-                  class:bg-card-secondary={i % 2 === 1}
-                >
-                    <div
-                      class="flex container-resp"
-                      class:flex-row-reverse={i % 2 === 1}
-                    >
-                        <div>
-                            <h6
-                              class="p-2 text-primary  -translate-x-5"
-                              class:relative={i % 2 === 1}
-                              class:-rotate-2={i % 2 === 0}
-                              class:rotate-2={i % 2 === 1}
-                              class:text-right={i % 2 === 1}
-                            >
-                                {item.date}
-                            </h6>
-                            <h3 class="p-2 text-white">{item.title}</h3>
-                            <p class="p-2">{item.description}</p>
-                            <Spacer size=".75rem"/>
-                            {#each item.techs as tech}
-                                <span class="p-2 text-secondary">{tech}</span>
-                            {/each}
-                            <span>
-                                <a href={item.github}>
-<!--                                    todo put icon in static     -->
-                                    <img class="w-14 inline-block p-2" src="https://cdn-icons-png.flaticon.com/512/25/25231.png">
-                                </a>
-                            </span>
-                        </div>
-                        <Spacer size="10rem" />
-                        <img class="neumorphism max-w-[50%]" src={item.preview} />
-                    </div>
+                <div class="m-10">
+                    <ProjectCard item={item} index={i} />
                 </div>
             {/each}
         </section>

@@ -74,4 +74,8 @@
         @apply container px-9 mx-auto;
         @apply lg:w-[60%] md:w-[80%] sm:w-[100%];
     }
+
+    .extraLetterSpacing {
+        letter-spacing: 0.3rem;
+    }
 }

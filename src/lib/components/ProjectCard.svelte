@@ -1,6 +1,6 @@
 <script>
-    import Spacer from "$lib/Spacer.svelte";
-    import FancyButton from "$lib/FancyButton.svelte";
+    import Spacer from "$lib/components/Spacer.svelte";
+    import FancyButton from "$lib/components/FancyButton.svelte";
 
     export let item;
     export let index;

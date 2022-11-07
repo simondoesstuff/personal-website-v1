@@ -2,14 +2,15 @@
     const content = [ "About", "Projects", "Experience", "Contact" ] ;
 </script>
 
+<!--        Sidebar style nav       -->
 <section class="flex flex-col justify-between h-[100vh] bg-bg-dark sticky top-0">
-<!--    Logo        -->
+    <!--    Logo        -->
     <div class="grid place-items-center p-7">
         <div class="h-12 aspect-square w-full">
             <img src="./icon.png" alt="Logo">
         </div>
     </div>
-<!--    Nav Buttons     -->
+    <!--    Nav Buttons     -->
     <div class="flex flex-col justify-center h-full">
         <div class="flex flex-col justify-between relative -top-7">
             <span class="w-full h-[.2rem] bg-primary-bg"></span>

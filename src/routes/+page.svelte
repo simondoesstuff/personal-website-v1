@@ -1,12 +1,12 @@
 <script lang="ts">
-    import Spacer from "../lib/components/Spacer.svelte";
-    import ProjectCard from "../lib/components/ProjectCard.svelte";
-    import FancyButton from "../lib/components/FancyButton.svelte";
-    import projects from "../lib/components/Projects.json";
-    import SectionTitle from "../lib/components/SectionTitle.svelte";
+    import Spacer from "$lib/components/Spacer.svelte";
+    import ProjectCard from "$lib/components/ProjectCard.svelte";
+    import FancyButton from "$lib/components/FancyButton.svelte";
+    import ProjectsJSON from "$lib/JSON/Projects.json";
+    import TagCloudJSON from "$lib/JSON/TagCloudLabels.json";
+    import SectionTitle from "$lib/components/SectionTitle.svelte";
     import TagCloud from "$lib/dependencies/TagCloud.svelte";
-
-    const texts = ["JavaScript", "TypeScript", "React", "Svelte", "Node.js", "Express", "MongoDB", "SQL", "HTML", "CSS", "Sass", "Bootstrap", "Material UI", "Git", "GitHub", "GitLab", "Jest", "React Testing Library", "Cypress", "Jira", "Agile", "Scrum", "Kanban", "Trello", "Figma", "Adobe XD", "Adobe Photoshop", "Adobe Illustrator", "Adobe InDesign", "Adobe Premiere Pro", "Adobe After Effects", "Adobe Lightroom", "Adobe Audition", "Adobe Animate", "Adobe Spark", "Adobe Spark AR", "Adobe Spark Video", "Adobe Spark Post", "Adobe Spark Page"];
+    import ProgressBar from "$lib/components/ProgressBar.svelte";
 </script>
 
 
@@ -38,7 +38,7 @@
 <!--            Header      -->
         <SectionTitle title="A few things I've built"/>
 <!--            Cards       -->
-        {#each projects as item, i}
+        {#each ProjectsJSON as item, i}
             <div class="m-10">
                 <ProjectCard item={item} index={i} />
             </div>
@@ -51,27 +51,44 @@
 
     <section id="Skills">
 <!--        Header      -->
-        <SectionTitle title="Skills"/>
-        <div class="container-resp">
-            <!--        Bars + Sphere     -->
-            <div class="flex">
-                <p class="text-primary">
-                    lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-                </p>
-<!--                Tag sphere  -->
-                <div class="w-[70%]">
-                    <TagCloud textClass="tagCloudItems" {texts}/>
+        <SectionTitle title="What I can do"/>
+            <div class="flex gap-10 container-resp">
+                <div class="py-10 w-[40%] flex flex-col justify-center">
+                    <!--        Bars     -->
+                    <div>
+                        <ProgressBar
+                          title="Front End"
+                          detail="Since 2019"
+                          progress={.82}
+                          class="bg-accent-red"
+                        />
+                        <Spacer size="3rem"/>
+                        <ProgressBar
+                          title="Back End"
+                          detail="Since 2021"
+                          progress={.4}
+                          class="bg-accent-yellow"
+                        />
+                        <Spacer size="3rem"/>
+                        <ProgressBar
+                          title="Graphic Design"
+                          detail="Since 2016"
+                          progress={.93}
+                          class="bg-accent-green"
+                        />
+                    </div>
+    <!--                    Bottom paragraph    -->
+                    <Spacer size="5rem"/>
+                    <p class="text-center text-xl mx-4">
+    <!--                        todo flesh out -->
+                        Additionally familiar with xxxx, yyyyy, zeee, aaaa, bbbbbbb, cccc and dddddd.
+                    </p>
                 </div>
-                <div>
-
+    <!--                Tag sphere  -->
+                <div class="w-[60%]">
+                    <TagCloud textClass="tagCloudItems" maxSpeed="slow" texts={TagCloudJSON}/>
                 </div>
             </div>
-            <!--        Final paragraph     -->
-            <Spacer size="3rem"/>
-            <p class="text-red-400">
-                lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-            </p>
-        </div>
     </section>
 
 
@@ -84,14 +101,3 @@
 
 
 </main>
-
-
-
-<style>
-    .tagCloudItems {
-        @apply text-primary;
-        @apply sm:text-[0.5rem];
-        @apply md:text-xl;
-        @apply lg:text-2xl;
-    }
-</style>

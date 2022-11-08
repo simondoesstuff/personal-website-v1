@@ -34,7 +34,7 @@
         <p class="p-2">{item.description}</p>
         <Spacer size=".75rem" />
         {#each item.techs as tech}
-            <span class="p-2 font-mono text-gray-500">{tech}</span>
+            <span class="p-2 font-mono text-vanilla brightness-150">{tech}</span>
         {/each}
         {#if item.gotoLink}
             <div class="m-5">

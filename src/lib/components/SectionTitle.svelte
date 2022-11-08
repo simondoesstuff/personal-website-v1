@@ -13,5 +13,4 @@
     <div class="w-[60%] grid place-items-center">
         <div class="bg-bg-light h-0.5 w-full"></div>
     </div>
-    <Spacer size="5rem"/>
 </div>

@@ -4,7 +4,7 @@
 
 <button class="">
     <a
-      class="block rounded font-mono border p-2.5 shadow transition-transform duration-300 text-primary border-primary hover:scale-110 hover:brightness-125 hover:bg-bg-dark"
+      class="block rounded font-mono border p-2.5 shadow transition-transform duration-[250ms] text-primary-light border-primary-light hover:scale-110 hover:brightness-125 hover:bg-bg-dark"
       href={link}
     >
         <slot/>

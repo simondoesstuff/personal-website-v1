@@ -21,9 +21,6 @@
         <p class="w-[75%] text-xl">
             I'm a software engineer based in the UK. I'm currently working at
             <a href="https://www.oxforduniversitypress.com/">Oxford University Press</a>
-            as a Senior Software Engineer. I'm also a co-founder of the <a href="https://www.oxfordhack.org/">Oxford
-            Hack</a> hackathon.
-            I have a passion for building things and learning new things.
         </p>
         <Spacer size="1.5rem"/>
         <div class="relative left-[25%]">
@@ -53,7 +50,7 @@
 <!--        Header      -->
         <SectionTitle title="What I can do"/>
             <div class="flex gap-10 container-resp">
-                <div class="py-10 w-[40%] flex flex-col justify-center">
+                <div class="w-[40%] flex flex-col justify-center">
                     <!--        Bars     -->
                     <div>
                         <ProgressBar
@@ -95,8 +92,8 @@
     <section id="Contact" class="h-[70vh] flex flex-col justify-center container-resp text-center m-10">
         <h2 class="text-white">Let's get in touch</h2>
         <Spacer size="3rem"/>
-        <p class="p-3 font-mono text-2xl text-primary extraLetterSpacing">simon@simonwalker.tech</p>
-        <p class="p-3 font-mono text-2xl text-primary extraLetterSpacing">(970) 581 5899</p>
+        <p class="p-3 font-mono text-2xl text-primary-light extraLetterSpacing">simon@simonwalker.tech</p>
+        <p class="p-3 font-mono text-2xl text-primary-light extraLetterSpacing">(970) 581 5899</p>
     </section>
 
 

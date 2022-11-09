@@ -12,12 +12,11 @@
     }
 
     body {
-        @apply bg-primary-bg;
         font-family: Roboto, Helvetica, Arial, sans-serif;
     }
 
     h1 {
-        @apply text-8xl font-bold text-white;
+        @apply text-8xl font-bold text-ebony-clay-50;
         font-size: clamp(3rem, 7vw, 6rem);
         letter-spacing: 0.1em;
     }
@@ -38,7 +37,11 @@
     }
 
     p {
-        @apply text-vanilla;
+        @apply text-ebony-clay-300;
+    }
+
+    section {
+        @apply py-[10rem];
     }
 }
 
@@ -49,7 +52,7 @@
 @layer components {
     .neumorphism {
         border-radius: 17px;
-        @apply bg-primary-bg;
+        @apply bg-ebony-clay;
         box-shadow:  6px 6px 12px #0f1017,
         -6px -6px 12px #2b3045;
     }
@@ -61,7 +64,7 @@
     }
 
     .tagCloudItems {
-        @apply text-primary sm:text-[0.5rem] md:text-xl lg:text-2xl;
+        @apply text-scooter sm:text-[0.5rem] md:text-xl lg:text-2xl;
     }
 }
 

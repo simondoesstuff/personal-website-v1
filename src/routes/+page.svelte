@@ -13,25 +13,27 @@
 <main class="w-full">
 
 
-    <section id="About" class="full-page-section container-resp">
-        <h3 class="-translate-x-5 -rotate-2 text-primary">Hello, I'm</h3>
-        <Spacer size="1.5rem"/>
-        <h1>Simon Walker</h1>
-        <Spacer size="1.5rem"/>
-        <p class="w-[75%] text-xl">
-            I'm a software engineer based in the UK. I'm currently working at
-            <a href="https://www.oxforduniversitypress.com/">Oxford University Press</a>
-        </p>
-        <Spacer size="1.5rem"/>
-        <div class="relative left-[25%]">
-            <FancyButton link="https://google.com"> <!-- todo change URL to resume download -->
-                <p class="text-xl text-primary">Resume</p>
-            </FancyButton>
+    <section id="About" class="full-page-section bg-sienna">
+        <div class="container-resp">
+            <h3 class="-translate-x-5 -rotate-2 text-scooter">Hello, I'm</h3>
+            <Spacer size="1.5rem"/>
+            <h1>Simon Walker</h1>
+            <Spacer size="1.5rem"/>
+            <p class="w-[75%] text-2xl text-gray-300">
+                I'm a software engineer based in the UK.
+            </p>
+            <Spacer size="1.5rem"/>
+            <!--        todo move button to the nav     -->
+            <!--        <div class="relative left-[25%]">-->
+            <!--            <FancyButton link="https://google.com"> &lt;!&ndash; todo change URL to resume download &ndash;&gt;-->
+            <!--                <p class="text-xl text-scooter">Resume</p>-->
+            <!--            </FancyButton>-->
+            <!--        </div>-->
         </div>
     </section>
 
 
-    <section id="Projects">
+    <section id="Projects" class="bg-ebony-clay">
 <!--            Header      -->
         <SectionTitle title="A few things I've built"/>
 <!--            Cards       -->
@@ -43,10 +45,7 @@
     </section>
 
 
-    <Spacer size="10rem"/>
-
-
-    <section id="Skills">
+    <section id="Skills" class="bg-majorelle">
 <!--        Header      -->
         <SectionTitle title="What I can do"/>
             <div class="flex gap-10 container-resp">
@@ -57,26 +56,26 @@
                           title="Front End"
                           detail="Since 2019"
                           progress={.82}
-                          class="bg-accent-red"
+                          class="bg-skillbar-red"
                         />
                         <Spacer size="3rem"/>
                         <ProgressBar
                           title="Back End"
                           detail="Since 2021"
                           progress={.4}
-                          class="bg-accent-yellow"
+                          class="bg-skillbar-yellow"
                         />
                         <Spacer size="3rem"/>
                         <ProgressBar
                           title="Graphic Design"
                           detail="Since 2016"
                           progress={.93}
-                          class="bg-accent-green"
+                          class="bg-skillbar-green"
                         />
                     </div>
     <!--                    Bottom paragraph    -->
                     <Spacer size="5rem"/>
-                    <p class="text-center text-xl mx-4">
+                    <p class="mx-4 text-center text-xl">
     <!--                        todo flesh out -->
                         Additionally familiar with xxxx, yyyyy, zeee, aaaa, bbbbbbb, cccc and dddddd.
                     </p>
@@ -89,11 +88,13 @@
     </section>
 
 
-    <section id="Contact" class="h-[70vh] flex flex-col justify-center container-resp text-center m-10">
-        <h2 class="text-white">Let's get in touch</h2>
-        <Spacer size="3rem"/>
-        <p class="p-3 font-mono text-2xl text-primary-light extraLetterSpacing">simon@simonwalker.tech</p>
-        <p class="p-3 font-mono text-2xl text-primary-light extraLetterSpacing">(970) 581 5899</p>
+    <section id="Contact" class="h-[70vh] flex flex-col justify-center bg-brazil">
+        <div class="container-resp text-center">
+            <h2 class="text-ebony-clay-50">Let's get in touch</h2>
+            <Spacer size="3rem"/>
+            <p class="p-3 font-mono text-2xl text-scooter-400 extraLetterSpacing">simon@simonwalker.tech</p>
+            <p class="p-3 font-mono text-2xl text-scooter-400 extraLetterSpacing">(970) 581 5899</p>
+        </div>
     </section>
 
 

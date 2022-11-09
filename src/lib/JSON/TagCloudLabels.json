@@ -16,7 +16,6 @@
   "GitHub",
   "GitLab",
   "Jest",
-  "React Testing Library",
   "Cypress",
   "Jira",
   "Agile",
@@ -24,18 +23,5 @@
   "Kanban",
   "Trello",
   "Figma",
-  "Adobe XD",
-  "Adobe Photoshop",
-  "Adobe Illustrator",
-  "Adobe InDesign",
-  "Adobe Premiere Pro",
-  "Adobe After Effects",
-  "Adobe Lightroom",
-  "Adobe Audition",
-  "Adobe Animate",
-  "Adobe Spark",
-  "Adobe Spark AR",
-  "Adobe Spark Video",
-  "Adobe Spark Post",
-  "Adobe Spark Page"
+  "Adobe XD"
 ]

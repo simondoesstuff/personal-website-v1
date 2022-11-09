@@ -3,6 +3,14 @@ module.exports = {
     content: ["./src/**/*.{html,js,svelte,ts}"],
     theme: {
         extend: {
+
+
+            fontFamily: {
+                roboto: ['Roboto', 'sans-serif'],
+                balsamiq: ['Balsamiq Sans', 'cursive'],
+            },
+
+
             colors: {
                 "skillbar": {
                     "red": "#e12d87",
@@ -10,9 +18,10 @@ module.exports = {
                     "green": "#2de190"
                 },
 
-                "sienna": "#7ab5d6",
-                "majorelle": "#211d35",
+                "bittersweet": "#FA7268",
                 "brazil": "#463d52",
+                "swamp": "#001220",
+                "gulf-blue": "#06134e",
 
                 "scooter": {
                     DEFAULT: "#2DC0E1",
@@ -42,6 +51,8 @@ module.exports = {
                     "900": "#12131e"
                 }
             }
+
+
         }
     },
     plugins: []

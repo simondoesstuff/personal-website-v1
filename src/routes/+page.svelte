@@ -1,20 +1,30 @@
 <script lang="ts">
     import Spacer from "$lib/components/Spacer.svelte";
     import ProjectCard from "$lib/components/ProjectCard.svelte";
-    import FancyButton from "$lib/components/FancyButton.svelte";
-    import ProjectsJSON from "$lib/JSON/Projects.json";
-    import TagCloudJSON from "$lib/JSON/TagCloudLabels.json";
     import SectionTitle from "$lib/components/SectionTitle.svelte";
     import TagCloud from "$lib/dependencies/TagCloud.svelte";
     import ProgressBar from "$lib/components/ProgressBar.svelte";
+    import CurvaciousDiv from "$lib/curvacious/CurvaciousDiv.svelte";
+
+    import ProjectsJSON from "$lib/JSON/Projects.json";
+    import TagCloudJSON from "$lib/JSON/TagCloudLabels.json";
+
+    import bitterTopSvg from "$lib/curvacious/bittersweet-top.svg";
+    import bitterBottomSvg from "$lib/curvacious/bittersweet-bottom.svg";
+    import bitterClaytonTopSvg from "$lib/curvacious/bitterClayton-top.svg";
+    import claytonBlackBottomSvg from "$lib/curvacious/claytonBlack-bottom.svg";
+    import claytonBlackTopSvg from "$lib/curvacious/claytonBlack-top.svg";
+    import blackGulfBottomSvg from "$lib/curvacious/blackGulf-bottom.svg";
+    import blackGulfTopSvg from "$lib/curvacious/blackGulf-top.svg";
 </script>
 
 
 <main class="w-full">
 
 
-    <section id="About" class="full-page-section bg-sienna">
-        <div class="container-resp">
+    <section id="About" class="h-[100vh] flex flex-col bg-bittersweet">
+        <CurvaciousDiv svg={bitterTopSvg}/>
+        <div class="flex-shrink container-resp">
             <h3 class="-translate-x-5 -rotate-2 text-scooter">Hello, I'm</h3>
             <Spacer size="1.5rem"/>
             <h1>Simon Walker</h1>
@@ -30,26 +40,29 @@
             <!--            </FancyButton>-->
             <!--        </div>-->
         </div>
+        <CurvaciousDiv svg={bitterBottomSvg}/>
     </section>
 
 
     <section id="Projects" class="bg-ebony-clay">
+        <CurvaciousDiv height="10rem" svg={bitterClaytonTopSvg}/>
 <!--            Header      -->
         <SectionTitle title="A few things I've built"/>
 <!--            Cards       -->
         {#each ProjectsJSON as item, i}
-            <div class="m-10">
+            <div class="p-10">
                 <ProjectCard item={item} index={i} />
             </div>
         {/each}
     </section>
 
 
-    <section id="Skills" class="bg-majorelle">
+    <section id="Skills" class="bg-black">
+        <CurvaciousDiv height="10rem" svg={claytonBlackTopSvg}/>
 <!--        Header      -->
         <SectionTitle title="What I can do"/>
             <div class="flex gap-10 container-resp">
-                <div class="w-[40%] flex flex-col justify-center">
+                <div class="w-[40%] flex flex-col py-10 gap-10">
                     <!--        Bars     -->
                     <div>
                         <ProgressBar
@@ -74,7 +87,6 @@
                         />
                     </div>
     <!--                    Bottom paragraph    -->
-                    <Spacer size="5rem"/>
                     <p class="mx-4 text-center text-xl">
     <!--                        todo flesh out -->
                         Additionally familiar with xxxx, yyyyy, zeee, aaaa, bbbbbbb, cccc and dddddd.
@@ -88,13 +100,15 @@
     </section>
 
 
-    <section id="Contact" class="h-[70vh] flex flex-col justify-center bg-brazil">
-        <div class="container-resp text-center">
-            <h2 class="text-ebony-clay-50">Let's get in touch</h2>
+    <section id="Contact" class="h-[70vh] flex flex-col justify-center bg-gulf-blue">
+        <CurvaciousDiv height="10rem" svg={blackGulfTopSvg}/>
+        <div class="text-center container-resp">
+            <h2 class="text-ebony-clay-50 font-balsamiq">Let's get in touch</h2>
             <Spacer size="3rem"/>
             <p class="p-3 font-mono text-2xl text-scooter-400 extraLetterSpacing">simon@simonwalker.tech</p>
             <p class="p-3 font-mono text-2xl text-scooter-400 extraLetterSpacing">(970) 581 5899</p>
         </div>
+        <Spacer size="10rem"/>
     </section>
 
 

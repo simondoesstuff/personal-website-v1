@@ -25,7 +25,7 @@
         </h6>
         <!--            Title       -->
         <div class="flex align-middle">
-            <h3 class="p-2 text-ebony-clay-50">{item.title}</h3>
+            <h3 class="p-2 text-ebony-clay-50 font-quicksand">{item.title}</h3>
             <a href={item.github}>
                 <img class="mx-5 w-10 invert" src="https://cdn-icons-png.flaticon.com/512/25/25231.png">
             </a>
@@ -34,7 +34,7 @@
         <p class="p-2">{item.description}</p>
         <Spacer size=".75rem" />
         {#each item.techs as tech}
-            <span class="p-2 font-mono text-ebony-clay-300 brightness-150">{tech}</span>
+            <span class="p-2 font-mono text-ebony-clay-500">{tech}</span>
         {/each}
         {#if item.gotoLink}
             <div class="m-5">

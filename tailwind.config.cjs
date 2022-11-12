@@ -7,7 +7,7 @@ module.exports = {
 
             fontFamily: {
                 roboto: ['Roboto', 'sans-serif'],
-                balsamiq: ['Balsamiq Sans', 'cursive'],
+                quicksand: ['Quicksand', 'sans-serif'],
             },
 
 
@@ -19,9 +19,9 @@ module.exports = {
                 },
 
                 "bittersweet": "#FA7268",
-                "brazil": "#463d52",
                 "swamp": "#001220",
                 "gulf-blue": "#06134e",
+                'maroon-flush': '#C62368',
 
                 "scooter": {
                     DEFAULT: "#2DC0E1",

@@ -9,27 +9,31 @@
     import ProjectsJSON from "$lib/JSON/Projects.json";
     import TagCloudJSON from "$lib/JSON/TagCloudLabels.json";
 
-    import bitterTopSvg from "$lib/curvacious/bittersweet-top.svg";
-    import bitterBottomSvg from "$lib/curvacious/bittersweet-bottom.svg";
+    import titleBgSvg from "../../static/title-bg.svg";
+    import titleBottomSvg from "$lib/curvacious/title-bottom.svg";
     import bitterClaytonTopSvg from "$lib/curvacious/bitterClayton-top.svg";
     import claytonBlackBottomSvg from "$lib/curvacious/claytonBlack-bottom.svg";
     import claytonBlackTopSvg from "$lib/curvacious/claytonBlack-top.svg";
     import blackGulfBottomSvg from "$lib/curvacious/blackGulf-bottom.svg";
     import blackGulfTopSvg from "$lib/curvacious/blackGulf-top.svg";
+    import WavyText from "$lib/components/WavyText.svelte";
 </script>
 
 
 <main class="w-full">
 
 
-    <section id="About" class="h-[100vh] flex flex-col bg-bittersweet">
-        <CurvaciousDiv svg={bitterTopSvg}/>
+    <section id="About" class="h-[100vh] flex flex-col bg-[#06134e]">
+        <div class="flex-grow"></div>   <!-- Spacer that keeps the main stuff centered -->
         <div class="flex-shrink container-resp">
-            <h3 class="-translate-x-5 -rotate-2 text-scooter">Hello, I'm</h3>
+            <h3 class="-translate-x-5 -rotate-2 text-skillbar-green">Hello, I'm</h3>
             <Spacer size="1.5rem"/>
-            <h1>Simon Walker</h1>
+            <div class="flex p-5 gap-9">
+                <WavyText class="text-white font-quicksand text-8xl font-bold" text="Simon"/>
+                <WavyText class="text-white font-quicksand text-8xl font-bold" text="Walker"/>
+            </div>
             <Spacer size="1.5rem"/>
-            <p class="w-[75%] text-2xl text-gray-300">
+            <p class="w-[75%] text-2xl text-white opacity-70">
                 I'm a software engineer based in the UK.
             </p>
             <Spacer size="1.5rem"/>
@@ -40,7 +44,7 @@
             <!--            </FancyButton>-->
             <!--        </div>-->
         </div>
-        <CurvaciousDiv svg={bitterBottomSvg}/>
+        <CurvaciousDiv svg={titleBottomSvg}/>
     </section>
 
 
@@ -62,7 +66,7 @@
 <!--        Header      -->
         <SectionTitle title="What I can do"/>
             <div class="flex gap-10 container-resp">
-                <div class="w-[40%] flex flex-col py-10 gap-10">
+                <div class="w-[40%] flex flex-col justify-around py-10 gap-10">
                     <!--        Bars     -->
                     <div>
                         <ProgressBar
@@ -103,13 +107,14 @@
     <section id="Contact" class="h-[70vh] flex flex-col justify-center bg-gulf-blue">
         <CurvaciousDiv height="10rem" svg={blackGulfTopSvg}/>
         <div class="text-center container-resp">
-            <h2 class="text-ebony-clay-50 font-balsamiq">Let's get in touch</h2>
+            <h2 class="text-ebony-clay-50 font-quicksand">Let's get in touch</h2>
             <Spacer size="3rem"/>
-            <p class="p-3 font-mono text-2xl text-scooter-400 extraLetterSpacing">simon@simonwalker.tech</p>
-            <p class="p-3 font-mono text-2xl text-scooter-400 extraLetterSpacing">(970) 581 5899</p>
+            <p class="p-3 text-2xl text-scooter-400 extraLetterSpacing">simon@simonwalker.tech</p>
+            <p class="p-3 text-2xl text-scooter-400 extraLetterSpacing">(970) 581 5899</p>
         </div>
-        <Spacer size="10rem"/>
+        <Spacer size="15rem"/>
     </section>
 
 
 </main>
+

@@ -9,7 +9,7 @@
     import ProjectsJSON from "$lib/JSON/Projects.json";
     import TagCloudJSON from "$lib/JSON/TagCloudLabels.json";
 
-    import titleBgSvg from "../../static/title-bg.svg";
+    import titleBlob from "$lib/curvacious/titleBlob.svg";
     import titleBottomSvg from "$lib/curvacious/title-bottom.svg";
     import bitterClaytonTopSvg from "$lib/curvacious/bitterClayton-top.svg";
     import claytonBlackBottomSvg from "$lib/curvacious/claytonBlack-bottom.svg";
@@ -23,14 +23,21 @@
 <main class="w-full">
 
 
-    <section id="About" class="h-[100vh] flex flex-col bg-[#06134e]">
+    <section id="About" class="h-[100vh] flex flex-col bg-gulf-blue">
         <div class="flex-grow"></div>   <!-- Spacer that keeps the main stuff centered -->
         <div class="flex-shrink container-resp">
             <h3 class="-translate-x-5 -rotate-2 text-skillbar-green">Hello, I'm</h3>
             <Spacer size="1.5rem"/>
-            <div class="flex p-5 gap-9">
-                <WavyText class="text-white font-quicksand text-8xl font-bold" text="Simon"/>
-                <WavyText class="text-white font-quicksand text-8xl font-bold" text="Walker"/>
+            <div class="relative z-10 flex gap-9 p-5">
+                <WavyText class="text-8xl font-bold text-white font-quicksand" text="Simon"/>
+                <WavyText class="text-8xl font-bold text-white font-quicksand" text="Walker"/>
+                <!-- Photo Blob -->
+                <div class="absolute -z-10 h-full w-[50%] aspect-auto -right-28 flex flex-col justify-center">
+                    <div class="grid h-full w-full place-items-center">
+                        <img src={titleBlob} class="absolute rotate-[210deg]"/>
+                        <img src='/SimonBrickCircle.png' class="absolute z-10 w-[58%] border-white border-8 rounded-full translate-x-5"/>
+                    </div>
+                </div>
             </div>
             <Spacer size="1.5rem"/>
             <p class="w-[75%] text-2xl text-white opacity-70">
@@ -117,4 +124,3 @@
 
 
 </main>
-

@@ -3,8 +3,8 @@
     export {clazz as class}
 
     export let text;
-    export let speed = 4;
-    export let ripple = .65;
+    export let speed = 5;
+    export let ripple = .7;
 </script>
 
 <div class="inline-block">
@@ -24,7 +24,7 @@
             transform: translateY(0em);
         }
         60% {
-            transform: translateY(-0.15em);
+            transform: translateY(-0.2em);
         }
         100% {
             transform: translateY(0em);

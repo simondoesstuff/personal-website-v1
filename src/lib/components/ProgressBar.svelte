@@ -22,7 +22,7 @@
         <p class="text-xl">{detail}</p>
     </div>
 
-    <Spacer size="1rem"/>
+    <Spacer class="w-[1rem]"/>
 
     <div class="w-full rounded-full bg-ebony-clay-600">
         <div class={`h-2 rounded-full ${clazz}`} bind:this={innerBarElRef}>

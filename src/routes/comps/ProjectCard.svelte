@@ -1,6 +1,6 @@
 <script>
     import Spacer from "$lib/components/Spacer.svelte";
-    import FancyButton from "$lib/components/FancyButton.svelte";
+    import FancyButton from "./FancyButton.svelte";
 
     export let item;
     export let index;
@@ -32,7 +32,7 @@
         </div>
         <!--        Details     -->
         <p class="p-2">{item.description}</p>
-        <Spacer size=".75rem" />
+        <Spacer class="w-[.75rem]" />
         {#each item.techs as tech}
             <span class="p-2 font-mono text-ebony-clay-500">{tech}</span>
         {/each}
@@ -45,6 +45,6 @@
         {/if}
     </div>
     <!--        Image       -->
-    <Spacer size="10rem" />
+    <Spacer class="w-[10rem]" />
     <img class="max-w-[40%] rounded-xl border-4 border-ebony-clay-600 shadow-2xl" src={item.image} />
 </div>

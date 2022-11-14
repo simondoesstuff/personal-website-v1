@@ -1,23 +1,19 @@
 <script lang="ts">
-    import Spacer from "$lib/components/Spacer.svelte";
-    import ProjectCard from "$lib/components/ProjectCard.svelte";
-    import SectionTitle from "$lib/components/SectionTitle.svelte";
-    import TagCloud from "$lib/dependencies/TagCloud.svelte";
-    import ProgressBar from "$lib/components/ProgressBar.svelte";
-    import CurvaciousDiv from "$lib/curvacious/CurvaciousDiv.svelte";
-
     import ProjectsJSON from "$lib/JSON/Projects.json";
     import TagCloudJSON from "$lib/JSON/TagCloudLabels.json";
 
-    import titleBlob from "$lib/curvacious/titleBlob.svg";
-    import titleBottomSvg from "$lib/curvacious/title-bottom.svg";
-    import titleClaytonTopSvg from "$lib/curvacious/titleClayton-top.svg";
-    import claytonBlackBottomSvg from "$lib/curvacious/claytonBlack-bottom.svg";
-    import claytonBlackTopSvg from "$lib/curvacious/claytonBlack-top.svg";
-    import blackGulfBottomSvg from "$lib/curvacious/blackGulf-bottom.svg";
-    import blackGulfTopSvg from "$lib/curvacious/blackGulf-top.svg";
+    import titleBlob from "./curvacious/titleBlob.svg";
+    import titleBottomSvg from "./curvacious/title-bottom.svg";
+    import claytonBlackTopSvg from "./curvacious/claytonBlack-top.svg";
+    import blackGulfTopSvg from "./curvacious/blackGulf-top.svg";
+
     import WavyText from "$lib/components/WavyText.svelte";
-    import FancyButton from "$lib/components/FancyButton.svelte";
+    import Spacer from "$lib/components/Spacer.svelte";
+    import CurvaciousDiv from "./curvacious/CurvaciousDiv.svelte";
+    import SectionTitle from "./comps/SectionTitle.svelte";
+    import ProjectCard from "./comps/ProjectCard.svelte";
+    import ProgressBar from "$lib/components/ProgressBar.svelte";
+    import TagCloud from "$lib/dependencies/TagCloud.svelte";
 </script>
 
 
@@ -28,25 +24,27 @@
         <div class="flex-grow"></div>   <!-- Spacer that keeps the main stuff centered -->
         <div class="flex-shrink container-resp">
             <h3 class="-translate-x-5 -rotate-2 text-shimmer">Hello, I'm</h3>
-            <Spacer size="1.5rem"/>
-            <div class="relative z-10 flex gap-9 p-5">
-                <WavyText class="text-8xl font-bold text-white font-quicksand" text="Simon"/>
-                <WavyText class="text-8xl font-bold text-white font-quicksand" text="Walker"/>
+            <Spacer class="w-[1.5rem]"/>
+            <div class="relative z-10 flex flex-col align-middle sm:flex-row sm:justify-start">
+                <div class="flex gap-4 sm:gap-9 lg:p-5">
+                    <WavyText class="text-7xl font-bold text-white font-quicksand sm:text-8xl" text="Simon"/>
+                    <WavyText class="text-7xl font-bold text-white font-quicksand sm:text-8xl" text="Walker"/>
+                </div>
                 <!-- Photo Blob -->
-                <div class="absolute -z-10 h-full w-[50%] aspect-auto -right-28 flex flex-col justify-center">
+                <div class="absolute right-0 translate-x-[35%] -z-10 h-full w-[50%] flex flex-col justify-center invisible xl:visible">
                     <div class="grid h-full w-full place-items-center">
                         <img src={titleBlob} class="absolute rotate-[210deg]"/>
-                        <img src='/SimonBrickCircle.png' class="absolute z-10 w-[58%] border-black border-[6px] rounded-full translate-x-5"/>
+                        <img src='/SimonBrickCircle.png' class="absolute z-10 w-[58%] border-black border-[6px] rounded-full translate-x-[7%]"/>
                     </div>
                 </div>
             </div>
-            <Spacer size="1.5rem"/>
-            <p class="w-[75%] text-2xl text-white opacity-70">
+            <Spacer class="w-[1.5rem]"/>
+            <p class="sm:w-[75%] text-2xl text-white opacity-70">
                 I'm a software engineer based in the UK.
             </p>
-            <Spacer size="1.5rem"/>
+            <Spacer class="w-[1.5rem]"/>
 <!--            Resume button      TODO add link -->
-            <div class="py-3 inline-block">
+            <div class="inline-block py-3">
                 <a href="google.com" class="inline-block rounded-full border p-4 text-xl font-bold transition-transform font-quicksand text-shimmer border-shimmer hover:bg-ebony-clay hover:scale-110 hover:text-white">
                     See Resume
                 </a>
@@ -57,7 +55,7 @@
 
 
     <section id="Projects" class="bg-ebony-clay">
-        <CurvaciousDiv height="10rem" svg={titleClaytonTopSvg}/>
+<!--        <CurvaciousDiv height="10rem" svg={titleClaytonTopSvg}/>-->
 <!--            Header      -->
         <SectionTitle title="A few things I've built"/>
 <!--            Cards       -->
@@ -83,14 +81,14 @@
                           progress={.82}
                           class="bg-maroon-flush"
                         />
-                        <Spacer size="3rem"/>
+                        <Spacer class="w-[3rem]"/>
                         <ProgressBar
                           title="Back End"
                           detail="Since 2021"
                           progress={.4}
                           class="bg-yammer"
                         />
-                        <Spacer size="3rem"/>
+                        <Spacer class="w-[3rem]"/>
                         <ProgressBar
                           title="Graphic Design"
                           detail="Since 2016"
@@ -116,11 +114,11 @@
         <CurvaciousDiv height="10rem" svg={blackGulfTopSvg}/>
         <div class="text-center container-resp">
             <h2 class="text-ebony-clay-50 font-quicksand">Let's get in touch</h2>
-            <Spacer size="3rem"/>
+            <Spacer class="w-[3rem]"/>
             <p class="p-3 text-2xl text-scooter-400 extraLetterSpacing">simon@simonwalker.tech</p>
             <p class="p-3 text-2xl text-scooter-400 extraLetterSpacing">(970) 581 5899</p>
         </div>
-        <Spacer size="15rem"/>
+        <Spacer class="w-[15rem]"/>
     </section>
 
 

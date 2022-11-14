@@ -18,8 +18,7 @@
     }
 
     h1 {
-        @apply text-8xl font-bold text-ebony-clay-50;
-        font-size: clamp(3rem, 7vw, 6rem);
+        @apply text-8xl-resp font-bold text-ebony-clay-50;
         letter-spacing: 0.1em;
     }
 

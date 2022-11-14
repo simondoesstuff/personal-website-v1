@@ -1,5 +1,6 @@
 <script>
-    export let size = 10;
+    let clazz;
+    export {clazz as class}
 </script>
 
-<div style="height: {size}; width: {size};"></div>
+<div class={`aspect-square ${clazz}`}></div>

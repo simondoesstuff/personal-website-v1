@@ -11,7 +11,7 @@
 
     import titleBlob from "$lib/curvacious/titleBlob.svg";
     import titleBottomSvg from "$lib/curvacious/title-bottom.svg";
-    import bitterClaytonTopSvg from "$lib/curvacious/bitterClayton-top.svg";
+    import titleClaytonTopSvg from "$lib/curvacious/titleClayton-top.svg";
     import claytonBlackBottomSvg from "$lib/curvacious/claytonBlack-bottom.svg";
     import claytonBlackTopSvg from "$lib/curvacious/claytonBlack-top.svg";
     import blackGulfBottomSvg from "$lib/curvacious/blackGulf-bottom.svg";
@@ -56,7 +56,7 @@
 
 
     <section id="Projects" class="bg-ebony-clay">
-        <CurvaciousDiv height="10rem" svg={bitterClaytonTopSvg}/>
+        <CurvaciousDiv height="10rem" svg={titleClaytonTopSvg}/>
 <!--            Header      -->
         <SectionTitle title="A few things I've built"/>
 <!--            Cards       -->

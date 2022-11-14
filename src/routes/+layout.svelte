@@ -14,8 +14,6 @@
     <TopNav />
     <slot />
 {:else}
-    <div class="flex w-full">
-        <SideNav />
-        <slot />
-    </div>
+    <SideNav />
+    <slot />
 {/if}

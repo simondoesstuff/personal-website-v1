@@ -17,6 +17,7 @@
     import blackGulfBottomSvg from "$lib/curvacious/blackGulf-bottom.svg";
     import blackGulfTopSvg from "$lib/curvacious/blackGulf-top.svg";
     import WavyText from "$lib/components/WavyText.svelte";
+    import FancyButton from "$lib/components/FancyButton.svelte";
 </script>
 
 
@@ -26,7 +27,7 @@
     <section id="About" class="h-[100vh] flex flex-col bg-gulf-blue">
         <div class="flex-grow"></div>   <!-- Spacer that keeps the main stuff centered -->
         <div class="flex-shrink container-resp">
-            <h3 class="-translate-x-5 -rotate-2 text-skillbar-green">Hello, I'm</h3>
+            <h3 class="-translate-x-5 -rotate-2 text-shimmer">Hello, I'm</h3>
             <Spacer size="1.5rem"/>
             <div class="relative z-10 flex gap-9 p-5">
                 <WavyText class="text-8xl font-bold text-white font-quicksand" text="Simon"/>
@@ -35,7 +36,7 @@
                 <div class="absolute -z-10 h-full w-[50%] aspect-auto -right-28 flex flex-col justify-center">
                     <div class="grid h-full w-full place-items-center">
                         <img src={titleBlob} class="absolute rotate-[210deg]"/>
-                        <img src='/SimonBrickCircle.png' class="absolute z-10 w-[58%] border-white border-8 rounded-full translate-x-5"/>
+                        <img src='/SimonBrickCircle.png' class="absolute z-10 w-[58%] border-black border-[6px] rounded-full translate-x-5"/>
                     </div>
                 </div>
             </div>
@@ -44,12 +45,12 @@
                 I'm a software engineer based in the UK.
             </p>
             <Spacer size="1.5rem"/>
-            <!--        todo move button to the nav     -->
-            <!--        <div class="relative left-[25%]">-->
-            <!--            <FancyButton link="https://google.com"> &lt;!&ndash; todo change URL to resume download &ndash;&gt;-->
-            <!--                <p class="text-xl text-scooter">Resume</p>-->
-            <!--            </FancyButton>-->
-            <!--        </div>-->
+<!--            Resume button      TODO add link -->
+            <div class="py-3 inline-block">
+                <a href="google.com" class="inline-block rounded-full border p-4 text-xl font-bold transition-transform font-quicksand text-shimmer border-shimmer hover:bg-ebony-clay hover:scale-110 hover:text-white">
+                    See Resume
+                </a>
+            </div>
         </div>
         <CurvaciousDiv svg={titleBottomSvg}/>
     </section>
@@ -80,21 +81,21 @@
                           title="Front End"
                           detail="Since 2019"
                           progress={.82}
-                          class="bg-skillbar-red"
+                          class="bg-maroon-flush"
                         />
                         <Spacer size="3rem"/>
                         <ProgressBar
                           title="Back End"
                           detail="Since 2021"
                           progress={.4}
-                          class="bg-skillbar-yellow"
+                          class="bg-yammer"
                         />
                         <Spacer size="3rem"/>
                         <ProgressBar
                           title="Graphic Design"
                           detail="Since 2016"
                           progress={.93}
-                          class="bg-skillbar-green"
+                          class="bg-shimmer"
                         />
                     </div>
     <!--                    Bottom paragraph    -->

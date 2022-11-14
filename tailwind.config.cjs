@@ -12,16 +12,12 @@ module.exports = {
 
 
             colors: {
-                "skillbar": {
-                    "red": "#e12d87",
-                    "yellow": "#9668e6",
-                    "green": "#2de190"
-                },
-
                 "bittersweet": "#FA7268",
                 "swamp": "#001220",
                 "gulf-blue": "#06134e",
-                'maroon-flush': '#C62368',
+                'maroon-flush': '#e12d87',
+                'yammer': '#9668e6',
+                'shimmer': '#2de190',
 
                 "scooter": {
                     DEFAULT: "#2DC0E1",

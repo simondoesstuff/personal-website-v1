@@ -31,12 +31,13 @@
                     <WavyText class="text-7xl font-bold text-white font-quicksand sm:text-8xl" text="Walker"/>
                 </div>
                 <!-- Photo Blob -->
-                <div class="absolute right-0 translate-x-[35%] -z-10 h-full w-[50%] flex flex-col justify-center invisible xl:visible">
-                    <div class="grid h-full w-full place-items-center">
-                        <img src={titleBlob} class="absolute rotate-[210deg]"/>
-                        <img src='/SimonBrickCircle.png' class="absolute z-10 w-[58%] border-black border-[6px] rounded-full translate-x-[7%]"/>
-                    </div>
-                </div>
+<!--                todo enable     -->
+<!--                <div class="absolute right-0 translate-x-[35%] -z-10 h-full w-[50%] flex flex-col justify-center invisible xl:visible">-->
+<!--                    <div class="grid h-full w-full place-items-center">-->
+<!--                        <img src={titleBlob} class="absolute rotate-[210deg]"/>-->
+<!--                        <img src='/SimonBrickCircle.png' class="absolute z-10 w-[58%] border-black border-[6px] rounded-full translate-x-[7%]"/>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
             <Spacer class="w-[1.5rem]"/>
             <p class="sm:w-[75%] text-2xl text-white opacity-70">
@@ -59,11 +60,12 @@
 <!--            Header      -->
         <SectionTitle title="A few things I've built"/>
 <!--            Cards       -->
-        {#each ProjectsJSON as item, i}
-            <div class="p-10">
-                <ProjectCard item={item} index={i} />
-            </div>
-        {/each}
+<!--        todo enable -->
+<!--        {#each ProjectsJSON as item, i}-->
+<!--            <div class="p-10">-->
+<!--                <ProjectCard item={item} index={i} />-->
+<!--            </div>-->
+<!--        {/each}-->
     </section>
 
 

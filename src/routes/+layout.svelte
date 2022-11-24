@@ -1,19 +1,14 @@
 <script>
   import "../app.css";
-  import TopNav from "$lib/components/NavBar/TopNav.svelte";
-  import SideNav from "$lib/components/NavBar/SideNav.svelte";
+  import Nav from "./comps/navBar/Nav.svelte";
+
 
   let innerWidth;
-  $: small = innerWidth <= 640; // todo may want to adjust that number
+  $: small = innerWidth <= 850; // todo may want to adjust that number
 </script>
 
 <svelte:window bind:innerWidth />
 
 
-{#if small}
-    <TopNav />
-    <slot />
-{:else}
-    <SideNav />
-    <slot />
-{/if}
+<Nav orientation={small ? 'horizontal' : 'vertical'}/>
+<slot />

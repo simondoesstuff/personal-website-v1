@@ -11,12 +11,6 @@ module.exports = {
             },
 
 
-            fontSize: {
-                '8xl-resp': 'clamp(3rem, 7vw, 6rem)',
-                '5xl-resp': 'clamp(2rem, 5vw, 3rem)',
-            },
-
-
             colors: {
                 "bittersweet": "#FA7268",
                 "swamp": "#001220",

@@ -18,7 +18,7 @@
     }
 
     h1 {
-        @apply text-8xl-resp font-bold text-ebony-clay-50;
+        @apply text-8xl font-bold text-ebony-clay-50;
         letter-spacing: 0.1em;
     }
 
@@ -80,6 +80,6 @@
     }
 
     .extraLetterSpacing {
-        letter-spacing: 0.25rem;
+        letter-spacing: 0.21rem;
     }
 }

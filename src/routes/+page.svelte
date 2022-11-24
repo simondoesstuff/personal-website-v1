@@ -117,8 +117,8 @@
         <div class="text-center container-resp">
             <h2 class="text-ebony-clay-50 font-quicksand">Let's get in touch</h2>
             <Spacer class="w-[3rem]"/>
-            <p class="p-3 text-2xl text-scooter-400 extraLetterSpacing">simon@simonwalker.tech</p>
-            <p class="p-3 text-2xl text-scooter-400 extraLetterSpacing">(970) 581 5899</p>
+            <p class="sm:p-3 text-lg sm:text-2xl text-scooter-400 extraLetterSpacing">simon@simonwalker.tech</p>
+            <p class="sm:p-3 text-lg sm:text-2xl text-scooter-400 extraLetterSpacing">(970) 581 5899</p>
         </div>
         <Spacer class="w-[15rem]"/>
     </section>

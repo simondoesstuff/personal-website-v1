@@ -7,7 +7,7 @@
 
     export let content;
 
-    let open = !false;
+    let open = false;
     const toggleMenu = (key) => {
         console.log(key);
         open = !open;

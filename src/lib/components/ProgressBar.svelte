@@ -18,15 +18,14 @@
 
 <div>
     <div class="mx-4 flex justify-between">
-        <h3 class="text-2xl text-ebony-clay-50">{title}</h3>
-        <p class="text-xl">{detail}</p>
+        <h3 class="text-xl sm:text-2xl text-ebony-clay-50">{title}</h3>
+        <p class="text-lg sm:text-xl">{detail}</p>
     </div>
 
     <Spacer class="w-[1rem]"/>
 
     <div class="w-full rounded-full bg-ebony-clay-600">
         <div class={`h-2 rounded-full ${clazz}`} bind:this={innerBarElRef}>
-            <slot/>
         </div>
     </div>
 </div>

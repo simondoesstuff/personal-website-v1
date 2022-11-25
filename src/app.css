@@ -61,7 +61,7 @@
     }
 
     .tagCloudItems {
-        @apply text-scooter sm:text-[0.5rem] md:text-xl lg:text-2xl;
+        @apply text-scooter;
     }
 }
 

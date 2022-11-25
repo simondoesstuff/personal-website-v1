@@ -73,9 +73,14 @@
         <CurvaciousDiv height="10rem" svg={claytonBlackTopSvg}/>
 <!--        Header      -->
         <SectionTitle title="What I can do"/>
-            <div class="flex gap-10 container-resp">
-                <div class="w-[40%] flex flex-col justify-around py-10 gap-10">
-                    <!--        Bars     -->
+        <div class="container-resp">
+            <div class="flex gap-10 flex-col md:flex-row-reverse">
+                <!--                Tag sphere  -->
+                <div class="md:w-[60%]">
+                    <TagCloud textClass="tagCloudItems" maxSpeed="normal" texts={TagCloudJSON}/>
+                </div>
+                <!--        Bars     -->
+                <div class="md:w-[40%] flex flex-col justify-around gap-10">
                     <div>
                         <ProgressBar
                           title="Front End"
@@ -98,17 +103,14 @@
                           class="bg-shimmer"
                         />
                     </div>
-    <!--                    Bottom paragraph    -->
-                    <p class="mx-4 text-center text-xl">
-    <!--                        todo flesh out -->
-                        Additionally familiar with xxxx, yyyyy, zeee, aaaa, bbbbbbb, cccc and dddddd.
-                    </p>
-                </div>
-    <!--                Tag sphere  -->
-                <div class="w-[60%]">
-                    <TagCloud textClass="tagCloudItems" maxSpeed="slow" texts={TagCloudJSON}/>
                 </div>
             </div>
+            <!--                    Bottom paragraph    -->
+            <p class="text-center text-lg sm:text-xl pt-10">
+                <!--                        todo flesh out -->
+                Additionally familiar with xxxx, yyyyy, zeee, aaaa, bbbbbbb, cccc and dddddd.
+            </p>
+        </div>
     </section>
 
 

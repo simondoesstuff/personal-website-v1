@@ -4,6 +4,7 @@
     export let texts = ['Add', 'Some', 'Texts', 'Here'];
     export let maxSpeed: "slow" | "normal" | "fast" = "fast";
     export let textClass: string;
+    export let textSize = .1;   // percentage radius in pixels
 
     let container: HTMLElement;
     let containerWidth: number;
@@ -22,6 +23,15 @@
 
       cloud?.destroy();
       cloud = TagCloud(container, texts, options);
+      adjustItemTextSizes();
+    }
+
+    function adjustItemTextSizes() {
+      for (let item of container.querySelectorAll('span')) {
+        console.log(item);
+        const size = textSize * radius;
+        item["style"].fontSize = `${size}px`;
+      }
     }
 
     onMount(async () => {

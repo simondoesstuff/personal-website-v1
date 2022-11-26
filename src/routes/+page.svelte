@@ -56,16 +56,15 @@
 
 
     <section id="Projects" class="bg-ebony-clay">
-<!--        <CurvaciousDiv height="10rem" svg={titleClaytonTopSvg}/>-->
 <!--            Header      -->
         <SectionTitle title="A few things I've built"/>
 <!--            Cards       -->
 <!--        todo enable -->
-<!--        {#each ProjectsJSON as item, i}-->
-<!--            <div class="p-10">-->
-<!--                <ProjectCard item={item} index={i} />-->
-<!--            </div>-->
-<!--        {/each}-->
+        {#each ProjectsJSON as item, i}
+            <div class="p-10">
+                <ProjectCard item={item} index={i} />
+            </div>
+        {/each}
     </section>
 
 

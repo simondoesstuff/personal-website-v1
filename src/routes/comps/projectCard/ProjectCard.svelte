@@ -74,7 +74,7 @@
             <h6 class="text-ebony-clay-100 text-center m-2"> {item.date} </h6>
 <!--            Image       -->
             <a href={item.gotoLink}>
-                <img class="rounded-xl border-4 border-ebony-clay-600 shadow-2xl mx-auto" src={item.image} />
+                <img class="rounded-xl border-2 border-ebony-clay-700 shadow-2xl mx-auto" src={item.image} />
             </a>
         </div>
         <p class="p-2 text-center">{item.description}</p>

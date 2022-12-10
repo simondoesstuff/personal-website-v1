@@ -5,7 +5,7 @@
 
 
   let innerWidth;
-  $: small = !innerWidth <= 960;
+  $: small = (innerWidth ?? 0) <= 960;
 </script>
 
 <svelte:window bind:innerWidth />

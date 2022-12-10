@@ -63,19 +63,19 @@
         <a href={item.gotoLink}>
             <Title {item} centered={true}/>
         </a>
-        <div class="flex justify-center">
+        <div class="flex justify-center flex-wrap">
+<!--            Techs       -->
             {#each item.techs as tech}
-                <span class="p-2 font-mono text-ebony-clay-500 whitespace-nowrap">{tech}</span>
+                <p class="px-2 font-mono text-ebony-clay-500 whitespace-nowrap">{tech}</p>
             {/each}
         </div>
-        <div class="relative">
+        <div class="m-5">
+<!--            Date    -->
+            <h6 class="text-ebony-clay-100 text-center m-2"> {item.date} </h6>
 <!--            Image       -->
             <a href={item.gotoLink}>
-                <img class="rounded-xl border-4 border-ebony-clay-600 shadow-2xl mx-auto m-5" src={item.image} />
+                <img class="rounded-xl border-4 border-ebony-clay-600 shadow-2xl mx-auto" src={item.image} />
             </a>
-            <h6 class="text-scooter absolute -right-20 top-[50%] rotate-90">
-                {item.date}
-            </h6>
         </div>
         <p class="p-2 text-center">{item.description}</p>
     </div>

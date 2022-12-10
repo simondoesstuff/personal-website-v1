@@ -4,7 +4,7 @@
 
 
   let innerWidth;
-  $: small = innerWidth <= 960; // todo may want to adjust that number
+  $: small = innerWidth <= 960;
 </script>
 
 <svelte:window bind:innerWidth />

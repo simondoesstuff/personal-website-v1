@@ -61,7 +61,7 @@
 <!--            Cards       -->
 <!--        todo enable -->
         {#each ProjectsJSON as item, i}
-            <div class="p-10">
+            <div class="py-10">
                 <ProjectCard item={item} index={i} />
             </div>
         {/each}

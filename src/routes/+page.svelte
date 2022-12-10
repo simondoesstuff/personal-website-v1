@@ -11,7 +11,7 @@
     import Spacer from "$lib/components/Spacer.svelte";
     import CurvaciousDiv from "./curvacious/CurvaciousDiv.svelte";
     import SectionTitle from "./comps/SectionTitle.svelte";
-    import ProjectCard from "./comps/ProjectCard.svelte";
+    import ProjectCard from "./comps/projectCard/ProjectCard.svelte";
     import ProgressBar from "$lib/components/ProgressBar.svelte";
     import TagCloud from "$lib/dependencies/TagCloud.svelte";
 </script>

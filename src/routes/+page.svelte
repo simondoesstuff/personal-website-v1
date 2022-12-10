@@ -2,7 +2,6 @@
     import ProjectsJSON from "$lib/JSON/Projects.json";
     import TagCloudJSON from "$lib/JSON/TagCloudLabels.json";
 
-    import titleBlob from "./curvacious/titleBlob.svg";
     import titleBottomSvg from "./curvacious/title-bottom.svg";
     import claytonBlackTopSvg from "./curvacious/claytonBlack-top.svg";
     import blackGulfTopSvg from "./curvacious/blackGulf-top.svg";
@@ -41,12 +40,12 @@
             </div>
             <Spacer class="w-[1.5rem]"/>
             <p class="sm:w-[75%] text-2xl text-white opacity-70">
-                I'm a software engineer based in the UK.
+                I'm a software developer based in Colorado
             </p>
             <Spacer class="w-[1.5rem]"/>
 <!--            Resume button      TODO add link -->
             <div class="inline-block py-3">
-                <a href="google.com" class="inline-block rounded-full border p-4 text-xl font-bold transition-transform font-quicksand text-shimmer border-shimmer hover:bg-ebony-clay hover:scale-110 hover:text-white">
+                <a href="/resume.pdf" class="inline-block rounded-full border p-4 text-xl font-bold transition-transform font-quicksand text-shimmer border-shimmer hover:bg-ebony-clay hover:scale-110 hover:text-white">
                     See Resume
                 </a>
             </div>
@@ -107,7 +106,7 @@
             <!--                    Bottom paragraph    -->
             <p class="text-center text-lg sm:text-xl pt-10">
                 <!--                        todo flesh out -->
-                Additionally familiar with xxxx, yyyyy, zeee, aaaa, bbbbbbb, cccc and dddddd.
+                Additionally familiar with most JetBrains IDEs, Git, Linux, Docker, and AWS EC2.
             </p>
         </div>
     </section>

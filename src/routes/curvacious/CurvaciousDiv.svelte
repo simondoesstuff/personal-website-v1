@@ -7,9 +7,19 @@
     $: if (height) {
         elHeight = height;
     }
+
+    let img;
+    let innerWidth;
+
+    $: if (innerWidth && img) {
+        svg.setAttribute('width', innerWidth);
+    }
 </script>
+
+<svelte:window bind:innerWidth></svelte:window>
 
 
 <div class="relative flex-grow w-full" style="height: {elHeight}">
-    <img class="absolute h-full w-full object-fill" src={svg}/>
+<!--    <img bind:this={img} class="absolute h-full w-full object-fill" src={svg}/>-->
+    <slot/>
 </div>

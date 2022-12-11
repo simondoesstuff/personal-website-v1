@@ -2,9 +2,9 @@
     import ProjectsJSON from "$lib/JSON/Projects.json";
     import TagCloudJSON from "$lib/JSON/TagCloudLabels.json";
 
-    import titleBottomSvg from "./curvacious/title-bottom.svg";
-    import claytonBlackTopSvg from "./curvacious/claytonBlack-top.svg";
-    import blackGulfTopSvg from "./curvacious/blackGulf-top.svg";
+    import TitleCurve from "./curvacious/titleCurve.svelte";
+    import SkillCurve from "./curvacious/skillCurve.svelte";
+    import ContactCurve from "./curvacious/contactCurve.svelte";
 
     import WavyText from "$lib/components/WavyText.svelte";
     import Spacer from "$lib/components/Spacer.svelte";
@@ -13,6 +13,7 @@
     import ProjectCard from "./comps/projectCard/ProjectCard.svelte";
     import ProgressBar from "$lib/components/ProgressBar.svelte";
     import TagCloud from "$lib/dependencies/TagCloud.svelte";
+    import skillCurve from "./curvacious/skillCurve.svelte";
 </script>
 
 
@@ -50,7 +51,9 @@
                 </a>
             </div>
         </div>
-        <CurvaciousDiv svg={titleBottomSvg}/>
+        <CurvaciousDiv>
+            <TitleCurve/>
+        </CurvaciousDiv>
     </section>
 
 
@@ -68,7 +71,9 @@
 
 
     <section id="Skills" class="bg-black">
-        <CurvaciousDiv height="10rem" svg={claytonBlackTopSvg}/>
+        <CurvaciousDiv height="10rem">
+            <SkillCurve/>
+        </CurvaciousDiv>
 <!--        Header      -->
         <SectionTitle title="What I can do"/>
         <div class="container-resp">
@@ -113,7 +118,9 @@
 
 
     <section id="Contact" class="h-[70vh] flex flex-col justify-center bg-gulf-blue">
-        <CurvaciousDiv height="10rem" svg={blackGulfTopSvg}/>
+        <CurvaciousDiv height="10rem">
+            <ContactCurve/>
+        </CurvaciousDiv>
         <div class="text-center container-resp">
             <h2 class="text-ebony-clay-50 font-quicksand">Let's get in touch</h2>
             <Spacer class="w-[3rem]"/>
